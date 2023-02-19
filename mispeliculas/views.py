@@ -5,8 +5,8 @@ from mispeliculas.models import *
 # Create your views here.
 
 def inicio(request):
-    return HttpResponse("vista inicio")
+    return render(request,'mispeliculas/inicio.html')
 def formulario(request):
-    return HttpResponse("vista formulario")
+    return render(request,'mispeliculas/formulario.html')
 def busqueda(request):
-    return HttpResponse("vista busqueda")
+    return render(request,'mispeliculas/busqueda.html')

@@ -20,7 +20,7 @@ class Serie(models.Model):
     descargada = models.BooleanField(default=False)
     
     def __str__(self):
-        return self.titulo  
+        return f"Serie: {self.titulo} - Genero: {self.genero}"
     
 class Capitulo(models.Model):
     numero = models.IntegerField(default=0)

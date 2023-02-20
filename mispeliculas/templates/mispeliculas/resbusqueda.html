@@ -1,0 +1,34 @@
+{% extends "mispeliculas/padre.html" %}
+    {% load static %}
+{% block contenidoQueCambia %}
+    <!-- Codigo a cambiar-->
+
+    
+
+<p>Estamos buscando el: {{titulo}}</p>
+
+{% if Serie %}
+
+<ul>
+{% for Serie in titulo %}
+    <li> {{Serie.titulo}}</li>
+    <li> {{Serie.temporadas}}</li>
+    <li> {{Serie.genero}}</li>
+{% endfor %}
+
+
+</ul>
+{% else %}
+<p>No hay datos con esa descripción.</p>
+
+{% endif %}
+
+<p style="color: red;">{{respuesta}}</p>
+
+
+
+
+
+
+
+{% endblock %}

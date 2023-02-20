@@ -1,12 +1,5 @@
-{% extends "mispeliculas/padre.html" %}
-    {% load static %}
-{% block contenidoQueCambia %}
-    <!-- Codigo a cambiar-->
-    {% if miFormulario.errors %}
-    <p style="color:red">Alguno de los datos es erroneo</p>
-    {%endif%}
-
-    <form action="/formulario/" method="POST">{% csrf_token %}
+    <form action="" method="post"> 
+        {% csrf_token %}
         <p>Agregar serie</p>
         <table>
 
@@ -17,4 +10,4 @@
 
     </form>
 
-    {% endblock %}
+    

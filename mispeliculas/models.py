@@ -9,7 +9,7 @@ class Pelicula(models.Model):
     descargada = models.BooleanField(default=False, blank=True)
     
     def __str__(self):
-        return self.titulo  
+        return f"Pelicula: {self.titulo} - Genero: {self.genero} - Director: {self.director}"
 
 class Serie(models.Model):
     titulo = models.CharField(max_length=100)
@@ -20,7 +20,7 @@ class Serie(models.Model):
     descargada = models.BooleanField(default=False)
     
     def __str__(self):
-        return f"Serie: {self.titulo} - Genero: {self.genero}"
+        return f"Serie: {self.titulo} - Genero: {self.genero} - temporadas: {self.temporadas}"
     
 class Capitulo(models.Model):
     numero = models.IntegerField(default=0)
@@ -30,5 +30,6 @@ class Capitulo(models.Model):
     
     def __str__(self):
         return self.serie.titulo + "" + self.temporadas + "x" + self.numero  
+
 
     
